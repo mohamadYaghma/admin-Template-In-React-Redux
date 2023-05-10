@@ -11,8 +11,8 @@ export const productReducer = function (state = initalState  , action ) {
             return  [...state , action.payload] ;
 
         case PRODUCT_REMOVE:
-            return  [...state.filter( q=> q.id != action.payload )] ;
+            return  [...state.filter( q=> q.id !== action.payload )] ;
         default : 
-            return [...state] ;
+            return state ;
     }
 } ;

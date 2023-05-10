@@ -1,7 +1,7 @@
 import React from "react";
-import { Counter } from "./views/Counter";
-import { ProductList } from "./views/product/ProductList";
-import { ProductAdd } from "./views/product/ProductAdd";
+import { Counter } from "views/Counter";
+import { ProductList } from "views/product/ProductList";
+import { ProductAdd } from "views/product/ProductAdd";
 
 
 

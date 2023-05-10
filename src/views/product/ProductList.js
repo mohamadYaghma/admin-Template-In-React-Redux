@@ -1,6 +1,6 @@
 import React from 'react'
 import {useSelector  , useDispatch} from 'react-redux'
-import {productremove} from '../../state-management/actions/productAction'
+import {productremove} from 'state-management/actions/productAction'
 
 export const ProductList = () => {
     const products = useSelector( store => store.productState) 

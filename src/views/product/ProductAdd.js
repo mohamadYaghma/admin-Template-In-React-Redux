@@ -1,6 +1,6 @@
 import React , {useRef} from 'react'
 import { useDispatch } from 'react-redux'
-import {productadd} from '../../state-management/actions/productAction'
+import {productadd} from 'state-management/actions/productAction'
 
 export const ProductAdd = () => {
     const dispatch  = useDispatch();

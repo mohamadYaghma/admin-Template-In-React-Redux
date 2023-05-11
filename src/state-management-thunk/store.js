@@ -1,5 +1,7 @@
 import { legacy_createStore as createStore , applyMiddleware  } from "redux";
-import  combineReducers  from "./reducer/index";
+// import { configureStore } from "@reduxjs/toolkit";
+
+import  rootReducer   from "./reducer/index";
 // persist
 import { persistStore , persistReducer } from "redux-persist";
 import storage from 'redux-persist/lib/storage'// import redux-logger
@@ -12,8 +14,10 @@ const persistConfig = {
     storage,
   }
 
-const persistedReducer = persistReducer(persistConfig , combineReducers);
+const persistedReducer = persistReducer(persistConfig , rootReducer);
 
-export const store = createStore(persistedReducer , applyMiddleware(thunk , logger))
+ const store = createStore(persistedReducer , applyMiddleware(thunk , logger))
 
-export const persistor = persistStore(store);
+ const persistor = persistStore(store);
+
+ export  {store, persistor}

@@ -22,7 +22,7 @@ export const ProductList = () => {
                 {
                     products.map( item => 
                         <li key={item.productId}> {item.productName} - {item.unitPrice} - 
-                        <button onClick={()=> dispatch(productremove(item.id))}>remove</button>
+                        <button onClick={()=> dispatch(productremove(item.productId))}>remove</button>
                         </li>
                         )
                 }

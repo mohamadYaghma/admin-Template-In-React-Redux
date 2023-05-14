@@ -1,7 +1,8 @@
 import {
     FETCH_PRODUCT_SUCC,
     FETCH_PRODUCT_FAILED,
-    FETCH_PRODUCT_START
+    FETCH_PRODUCT_START,
+    PRODUCT_REMOVE
 } from "../action/actionTypes"
 
 
@@ -19,6 +20,8 @@ function ProductThunkReducer(state = initialState, action){
             return {items:action.payload , message:'' , isLoding:false};
         case FETCH_PRODUCT_FAILED:        
             return {items:[] , message:action.payload , isLoding:false};
+        case PRODUCT_REMOVE:
+            return  [...state.filter( q=> q.id !== action.payload )] ;
     
         default:
             return state;

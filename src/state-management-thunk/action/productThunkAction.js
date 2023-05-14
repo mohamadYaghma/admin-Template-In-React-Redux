@@ -1,7 +1,8 @@
 import {
     FETCH_PRODUCT_SUCC,
     FETCH_PRODUCT_FAILED,
-    FETCH_PRODUCT_START
+    FETCH_PRODUCT_START,
+    PRODUCT_REMOVE 
 } from './actionTypes';
 
 // action creator 
@@ -32,3 +33,7 @@ export const fetchProductFailed=(errorMessage)=>({
     payload:errorMessage
 });
 
+export const fetchProductremove=(id)=>({
+    type:PRODUCT_REMOVE,
+    payload:id
+});

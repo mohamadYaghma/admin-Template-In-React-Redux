@@ -1,7 +1,8 @@
 import React from 'react'
 // redux
 import { useDispatch , useSelector } from 'react-redux'
-import { productremove } from '../../state-management/actions/productAction'
+// import { productremove } from '../../state-management/actions/productAction'
+import { fetchProductremove } from '../../state-management-thunk/action/productThunkAction'
 import {getAllProduct} from '../../state-management-thunk/action/productThunkAction'
 
 export const ProductList = () => {
@@ -22,7 +23,7 @@ export const ProductList = () => {
                 {
                     products.map( item => 
                         <li key={item.productId}> {item.productName} - {item.unitPrice} - 
-                        <button onClick={()=> dispatch(productremove(item.productId))}>remove</button>
+                        <button onClick={()=> dispatch(fetchProductremove(item.productId))}>remove</button>
                         </li>
                         )
                 }
